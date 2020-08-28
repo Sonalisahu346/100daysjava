@@ -1,0 +1,14 @@
+package pack1;
+
+public class Stativ_var {
+	
+static int x=10;
+public static void main(String args[])
+{
+	Stativ_var t1=new Stativ_var();
+	t1.x=50;
+	System.out.println(t1.x);
+	Stativ_var t2=new Stativ_var();
+	System.out.println(t2.x);
+}
+}
