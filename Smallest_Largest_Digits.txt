@@ -1,0 +1,29 @@
+package prgs3;
+import java.util.*;
+
+public class Smallest_Largest_Digits
+{
+public static void main(String args[])
+{
+	Scanner s=new Scanner(System.in);
+	System.out.println("enter number");
+	int n=s.nextInt();
+	int snum,lnum,rem;
+	snum=lnum=n%10;
+	while(n>0)
+	{
+		rem=n%10;
+		n=n/10;
+		if(rem>lnum)
+		{
+			lnum=rem;
+		}
+		else if(rem<=snum)
+		{
+			snum=rem;
+		}
+	}
+	System.out.println("smallest digit="+snum);
+	System.out.println("largest digit="+lnum);
+}
+}
