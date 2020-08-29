@@ -1,0 +1,52 @@
+package pack1;
+class Stud
+{
+	String name;
+	int rollno;
+	Stud(String name,int rollno)
+	{
+		this.name=name;
+		this.rollno=rollno;
+	}
+	void showStudent()
+	{
+		System.out.println("name="+name+"rollno="+rollno);
+	}
+}
+class Marks extends Stud
+{
+	int m1,m2;
+	Marks(String name,int rn,int m1,int m2)
+	{
+		super(name,rn);
+		this.m1=m1;
+		this.m2=m2;
+	}
+	void showmarks()
+	{
+		System.out.println("m1="+m1+"m2="+m2);
+	}
+}
+class Res extends Marks
+{
+	int m3,m4;
+	Res(String name,int rn,int m1,int m2,int m3,int m4)
+	{
+		super(name,rn,m1,m2);
+		this.m3=m3;
+		this.m4=m4;
+	}
+	void showResult()
+	{
+		System.out.println("m3="+m3+"m4="+m4);
+	}
+}
+public class Multi_Inh {
+public static void main(String args[])
+{
+	Res r=new Res("sai",11,77,88,56,67);
+	r.showStudent();
+	r.showmarks();
+	r.showResult();
+}
+}
